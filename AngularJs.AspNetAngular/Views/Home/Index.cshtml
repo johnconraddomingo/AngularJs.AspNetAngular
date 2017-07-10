@@ -2,12 +2,22 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>Hello World</h1>
-</div>
+<div ng-app="Patients">
+    <div class="jumbotron">
+        <h1>Patient Management System</h1>
+    </div>
 
-<div class="row">
-    <input type="text" ng-model="helloAngular" />
-    <h1>{{helloAngular}}</h1>
+    <div class="row">
+        <div ng-controller="PatientController">
+            <h1>{{Header}}</h1>
+            <div ng-repeat="patient in Patients">
+                <div>{{patient.FirstName}} {{patient.LastName}} </div>
 
+            </div>
+        </div>
+
+
+
+
+    </div>
 </div>

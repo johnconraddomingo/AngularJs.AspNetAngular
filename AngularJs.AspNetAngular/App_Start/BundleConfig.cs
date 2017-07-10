@@ -29,6 +29,10 @@ namespace AngularJs.AspNetAngular
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            // Custom Angular Scripts
+            bundles.Add(new ScriptBundle("~/bundles/PatientManagement").Include(
+                "~/Scripts/PatientManagement/*.js"));
         }
     }
 }

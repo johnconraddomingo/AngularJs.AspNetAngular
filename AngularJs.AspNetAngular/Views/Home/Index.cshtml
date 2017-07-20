@@ -10,10 +10,32 @@
     <div class="row">
         <div ng-controller="PatientController">
             <h1>{{Header}}</h1>
-            <div ng-repeat="patient in Patients">
-                <div>{{patient.FirstName}} {{patient.LastName}} </div>
 
-            </div>
+            <form name="SearchPatient" ng-submit="search(searchTerm)">
+                <div>
+                    Search: <input type="text" ng-model="searchTerm" />
+                    <input type="submit"  value="Search" /> 
+                    <input type="reset" value="Reset" ng-click="resetSearch()" />
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Age</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="patient in Patients">
+                            <td>{{patient.firstName}}</td>
+                            <td>{{patient.lastName}}</td>
+                            <td>{{patient.age}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            
         </div>
 
 

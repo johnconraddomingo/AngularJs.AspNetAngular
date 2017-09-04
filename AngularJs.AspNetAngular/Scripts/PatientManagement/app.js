@@ -47,9 +47,7 @@
 
 
         $scope.resetSearch = function () {
-
-
-
+ 
             $http.get("Patient/Search/undefined")
                 .then(function (response) {
                     $scope.Patients = response.data;
